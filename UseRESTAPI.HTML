@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Use REST API Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h3>Use REST API Example</h3>
+  <div id="accountData"></div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Get the access token from the URL parameters
+      var accessToken = getAccessTokenFromURL();
+
+      if (accessToken) {
+        // Make the API request to retrieve account data
+        var apiEndpoint = "https://http://cleandrabay.ie/beara/libs/php/salesforce-proxy.php";
+        var headers = {
+          "Authorization": "Bearer " + accessToken
+        };
+
+        $.ajax({
+          url: apiEndpoint,
+          headers: headers,
+          method: "GET",
+          success: function(response) {
+            displayAccountData(response.records);
+          },
+          error: function(xhr, status, error) {
+            console.error("API request error:", error);
+          }
+        });
+      } else {
+        console.error("Access token not found in URL.");
+      }
+    });
+
+    // Extract the access token from URL parameters
+    function getAccessTokenFromURL() {
+      var urlParams = new URLSearchParams(window.location.hash.substring(1));
+      return urlParams.get("access_token");
+    }
+
+    // Display account data on the page
+    function displayAccountData(records) {
+      var accountData = $("#accountData");
+      accountData.empty();
+
+      if (records.length > 0) {
+        var table = $("<table>");
+        var tableHead = $("<thead>").append("<tr><th>Account ID</th><th>Account Name</th></tr>");
+        var tableBody = $("<tbody>");
+
+        records.forEach(function(record) {
+          var accountId = record.Id;
+          var accountName = record.Name;
+
+          var row = $("<tr>").append("<td>" + accountId + "</td><td>" + accountName + "</td>");
+          tableBody.append(row);
+        });
+
+        table.append(tableHead, tableBody);
+        accountData.append(table);
+      } else {
+        accountData.text("No account data available.");
+      }
+    }
+  </script>
+</body>
+</html>

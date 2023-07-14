@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salesforce REST API Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h3>REST API With JavaScript</h3>
+  <button id="connect">Connect to the REST API</button>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#connect').click(function() {
+        var clientId = "3MVG9vvlaB0y1YsLbTio7h8402brRGYpBWHbiJCIWB1gxzTUCrtbDCCcundrYNckrh9ojXvQSnO3YG6rt0Ut2";
+        var authEndPoint = "https://login.salesforce.com/services/oauth2/authorize";
+        var responseType = "token";
+        var redirectURI = "https://cleandrabay.ie/beara/UseRESTAPI.HTML";
+
+        var requestURL = authEndPoint + "?client_id=" + clientId + "&response_type=" + responseType + "&redirect_uri=" + encodeURIComponent(redirectURI);
+
+        window.location.href = requestURL;
+      });
+    });
+  </script>
+</body>
+</html>

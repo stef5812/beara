@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stefs Beara Guide</title>
+        <meta name="author" content="Stefan Dodds">
+        <meta name="description" content="Tourist Guide to the Beara Peninsula">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="icon" type="image/png" href="libs/images/favicon.png">
+
+         <!-- add in the css to clear old settings -->
+        <link rel="stylesheet" href="libs/css/normalize.css" />
+
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/css/easybarbtn.css">    
+        <link rel="stylesheet" href="libs/css/control-loading.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />   
+        <link rel="stylesheet" href="libs/css/easy-button.css">
+        <link rel="stylesheet" href="libs/css/map.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js" integrity="sha256-jVdNHjjOOJMoykxLOdGxOUzGJDlmr8MM6sFF++b1/sI=" crossorigin="anonymous"></script>
+        <!-- Leaflet.locatecontrol default icon (if you don't have your own custom icon) -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css"/>
+        <!-- add in the css to set new styles -->
+        <link rel="stylesheet" href="libs/css/style.css">
+    </head>
+    <body>
+        <div id="preloader"></div>
+          
+                <div class="header-image">
+
+                    <!--Nav bar with extra features-->
+                    <nav id="navWrap">   
+                        <div id="cont-container">                                         
+                            <div class="page" id="map">
+                                <button id="refreshButton">Refresh Button</button>
+                                <div class="container">
+                                    <!--html elements to hold data-->
+                                    <input id="inpLat" size="5" value="51.743798" type="text"><br>
+                                    <input id="inpLng" size="5" value="-9.913991" type="text"><br>   
+                                    
+                                    <pre id="out"><p>File contents will appear here</p></pre> 
+                                    <button id="locateButton">Locate Me</button>  
+
+                                </div>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+                        
+
+
+            <!-- Scripts -->
+        <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="libs/js/custom-selectbox.js"></script>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+<!-- Leaflet and Leaflet.locatecontrol scripts -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+<script src="libs/js/control-loading.js"></script>
+
+         <script src="libs/js/easybutton.js"></script>
+
+         <script type="application/javascript" src="libs/js/ParseRestaurantData.js"></script>
+         <script type="application/javascript" src="libs/js/load.js"></script>	
+         <script type="application/javascript" src="libs/js/map.js"></script>	
+    </body>
+</html>
+

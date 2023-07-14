@@ -1,0 +1,212 @@
+#map { 
+    margin-bottom: 15px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  /*another-popop style*/
+  .restau-popup .leaflet-popup-content-wrapper {
+    background: #f8f9fa;
+    height: 190px;
+    width: 300px;
+    color: rgb(11, 0, 0);
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 10px;
+      border:8px outset rgb(219, 15, 15);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .restau-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .restau-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .restau-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+  
+  .local-popup .leaflet-popup-content-wrapper {
+    background: #f8f9fa;
+    height: 190px;
+    width: 300px;
+    color: rgb(11, 0, 0);
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 10px;
+      border:8px outset rgb(11, 224, 50);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .local-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .local-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .local-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .visit-popup .leaflet-popup-content-wrapper {
+    background: #f8f9fa;
+    height: 190px;
+    width: 300px;
+    color: rgb(11, 0, 0);
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 10px;
+      border:8px outset rgb(37, 7, 134);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .visit-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .visit-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .visit-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }  
+
+  .pass-popup .leaflet-popup-content-wrapper {
+    background: #f8f9fa;
+    height: 190px;
+    width: 300px;
+    color: rgb(11, 0, 0);
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 10px;
+      border:8px outset rgb(248, 251, 71);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .pass-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .local-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .pass-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .restautitle {
+    position: relative;
+    z-index: 1;
+    background-color: #2561a0;
+    height: 60px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border:1px solid brown;
+    border-radius: 50px 0px 50px 0px;
+    float:left;
+    padding: 5px;
+    text-align: center;
+    }
+    .restauLayer1 {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      float:left;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }    
+
+    .restauLayer2 {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      float:right;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }
+
+  
+    .restautemp {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      float:left;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }  
+
+      .restauspeed {
+        position: relative;
+        z-index: 1;
+        background-color: #2561a0;
+        height: 110px;
+        width: 45%;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        float:right;
+        padding: 5px;
+        color: white;
+        text-align: center;
+        }      
+
+        .restaufooter {
+          position: relative;
+          z-index: 1;
+          background-color: #2561a0;
+          height: 20px;
+          width: 100%;
+          color: white;
+          font-weight: bold;
+          font-size: 15px;
+          border:1px solid brown;
+          border-radius: 50px 0px 50px 0px;
+          float:left;
+          padding: 5px;
+          text-align: center;
+          }
+  
+      .restaufooter a:link { color: red; }
+      .restaufooter a:visited { color: purple; }
+      .restaufooter a:hover { color: greenyellow; }
+      .restaufooter a:active { color: yellow; }
