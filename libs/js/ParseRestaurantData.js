@@ -52,25 +52,8 @@ function readTextFile(file)
                     var thisLat = (rLat[i]);
                     var thisLng = (rLon[i]);
 
-                    var DetailsBox = "Name : " + rName[i];
-                    if (rWhat[i] !== null) {
-                        DetailsBox += "<br>What : " + rWhat[i];
-                    };
-                    if (rTown[i] !== null) {
-                        DetailsBox += "<br>Town : " + rTown[i];
-                    };
-                    if (rCounty[i] !== null) {
-                        DetailsBox += "<br>County : " + rCounty[i];
-                    };
-                    if (rEircode[i] !== null) {
-                        DetailsBox += "<br>Eircode : " + rEircode[i];
-                    }  ;                     
-                    if (rphone[i] !== null) {
-                        DetailsBox += "<br>Phone : " + rphone[i];
-                    }  ;                                                                           
-                    if (rLink[i] !== null) {
-                        DetailsBox += "<br><a href='" + rLink[i] + "' target='_blank'><img src='libs/icons/newlink.png' style='width:25px;height:25px;'></a>"; //Image
-                    }; 
+                                                                          
+
                     // if (rImage[i] !== null) {
                     //     var myShadow = "<div style='border:0; width:209px; height:109px; overflow:hidden;'><img src='libs/images/image.jpg' width=209 height=109></img><img style='position:relative; left: 0px; top: -159px;' src='libs/images/" + rImage[i] + "' width=200 height=100></div>";
                     //     DetailsBox += "<br>" + myShadow;
@@ -111,30 +94,58 @@ function readTextFile(file)
                         'className' : 'pass-popup'
                         }                                                
 
-                    //var myRestauData = "<div class='weathertitle'>Weather for : <br>" + $('#capitalCity').val() + '</div>';                                     
+                    //var myRestauData = "<div class='weathertitle'>Weather for : <br>" + $('#capitalCity').val() + '</div>';  
+                    var sPin                                   
 
                     switch(rColour[i]) {
                         case "R":
                             var RestauMarker = L.marker([thisLat, thisLng], {icon: RestauIcon}).addTo(placeRestau);
                             var markerPopup = RestauMarker.bindPopup(DetailsBox, restauOptions)
+                            sPin="pin-restau.png";
                             break
                         case "G":
                             var RestauMarker = L.marker([thisLat, thisLng], {icon: LocalIntIcon}).addTo(placeLocal);
                             var markerPopup = RestauMarker.bindPopup(DetailsBox, localOptions)
+                            sPin="pin-local.png";
                             break
                         case "T":
                             var RestauMarker = L.marker([thisLat, thisLng], {icon: ToVisitIcon}).addTo(PLaceToVisit);
                             var markerPopup = RestauMarker.bindPopup(DetailsBox, visitOptions)
+                            sPin="pin-tovisit.png";
                             break
                         case "P":
                             var RestauMarker = L.marker([thisLat, thisLng], {icon: PassesIcon}).addTo(placePass);
                             var markerPopup = RestauMarker.bindPopup(DetailsBox, passOptions)
+                            sPin="pin-passes.png";
                             break
                         case "A":
                             var RestauMarker = L.marker([thisLat, thisLng], {icon: AccomIcon}).addTo(Accom);
                             var markerPopup = RestauMarker.bindPopup(DetailsBox, accomOptions)
+                            sPin="pin-accom.png";
                             break                            
                     }
+                    var DetailsBox = "";
+                    if (rLink[i] !== null) {
+                        DetailsBox += "<br><a href='" + rLink[i] + "' target='_blank'><img src='libs/icons/"+sPin+ "' style='width:40px;height:60px;'></a><br>"; //Image
+                    } else {
+                        DetailsBox += "<br><img src='libs/icons/pin-restau.png' style='width:40px;height:60px;'><br>"; //Image
+                    }; 
+                    DetailsBox += "Name : " + rName[i];                    
+                    if (rWhat[i] !== null) {
+                        DetailsBox += "<br>What : " + rWhat[i];
+                    };
+                    if (rTown[i] !== null) {
+                        DetailsBox += "<br>Town : " + rTown[i];
+                    };
+                    if (rCounty[i] !== null) {
+                        DetailsBox += "<br>County : " + rCounty[i];
+                    };
+                    if (rEircode[i] !== null) {
+                        DetailsBox += "<br>Eircode : " + rEircode[i];
+                    }  ;                     
+                    if (rphone[i] !== null) {
+                        DetailsBox += "<br>Phone : " + rphone[i];
+                    }  ;                     
                 
                 //marker.bindPopup(popup).openPopup();                    
 
@@ -196,7 +207,7 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
         case "Active":
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon-active.png',
-                iconSize: [25, 25],
+                iconSize: [40, 60],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',
@@ -209,7 +220,7 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
         case "Fully trained/Awaiting checks":
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon-L.png',
-                iconSize: [25, 25],
+                iconSize: [40, 60],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',
@@ -221,7 +232,7 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
         default:
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon.png',
-                iconSize: [25, 25],
+                iconSize: [40, 60],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',

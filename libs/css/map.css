@@ -7,15 +7,16 @@
   /*another-popop style*/
   .restau-popup .leaflet-popup-content-wrapper {
     background: #f8f9fa;
-    height: 190px;
-    width: 300px;
+    height: 250px;
+    width: 200px;
     color: rgb(11, 0, 0);
     font-size: 12px;
     line-height: 24px;
-    border-radius: 50px 0px 50px 0px;
+    border-radius: 150px 0px 50px 0px;
     box-shadow: 5px 5px 5px 5px #888888;
-    padding: 10px;
-      border:8px outset rgb(219, 15, 15);
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(232, 11, 104);
       -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
       -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
   }
@@ -35,15 +36,16 @@
   
   .local-popup .leaflet-popup-content-wrapper {
     background: #f8f9fa;
-    height: 190px;
-    width: 300px;
+    height: 250px;
+    width: 200px;
     color: rgb(11, 0, 0);
     font-size: 12px;
     line-height: 24px;
-    border-radius: 50px 0px 50px 0px;
+    border-radius: 150px 0px 50px 0px;
     box-shadow: 5px 5px 5px 5px #888888;
-    padding: 10px;
-      border:8px outset rgb(11, 224, 50);
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(32, 167, 91);
       -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
       -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
   }
@@ -62,15 +64,16 @@
 
   .visit-popup .leaflet-popup-content-wrapper {
     background: #f8f9fa;
-    height: 190px;
-    width: 300px;
+    height: 250px;
+    width: 200px;
     color: rgb(11, 0, 0);
     font-size: 12px;
     line-height: 24px;
-    border-radius: 50px 0px 50px 0px;
+    border-radius: 150px 0px 50px 0px;
     box-shadow: 5px 5px 5px 5px #888888;
-    padding: 10px;
-      border:8px outset rgb(37, 7, 134);
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(75, 123, 214);
       -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
       -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
   }
@@ -89,22 +92,23 @@
 
   .pass-popup .leaflet-popup-content-wrapper {
     background: #f8f9fa;
-    height: 190px;
-    width: 300px;
+    height: 250px;
+    width: 200px;
     color: rgb(11, 0, 0);
     font-size: 12px;
     line-height: 24px;
-    border-radius: 50px 0px 50px 0px;
+    border-radius: 150px 0px 50px 0px;
     box-shadow: 5px 5px 5px 5px #888888;
-    padding: 10px;
-      border:8px outset rgb(248, 251, 71);
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(255, 181, 30);
       -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
       -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
   }
   .pass-popup .leaflet-popup-content-wrapper a {
     color: rgba(200, 200, 200, 0.1);
   }
-  .local-popup .leaflet-popup-tip-container {
+  .pass-popup .leaflet-popup-tip-container {
     width: 50px;
     height: 15px;
   }

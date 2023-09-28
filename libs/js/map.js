@@ -11,10 +11,10 @@ var map = L.map('map').setView([$('#inpLat').val(), $('#inpLng').val()], 10);
 map.options.minZoom = 1;
 map.options.maxZoom = 14;
 
-var southWest = L.latLng(-89.98155760646617, -180),
-northEast = L.latLng(89.99346179538875, 180);
+var southWest = L.latLng(51.20263434385417, -10.79384991201536),
+northEast = L.latLng(52.33455164787253, -8.794338363234628);
 var bounds = L.latLngBounds(southWest, northEast);
-
+map.setZoom(9);
 map.setMaxBounds(bounds);
 map.on('drag', function() {
     map.panInsideBounds(bounds, { animate: false });
@@ -164,12 +164,12 @@ var myMapLayers = {
 };
 
 var overlay1 = {
-    "Cleandra Bay Lodge": homeMarker,
-    "Eating / Bars": placeRestau,
-    "Local Interest": placeLocal,
-    "Places to visit": PLaceToVisit,
-    "High Road Passes": placePass,   
-    "Accomodation": Accom,
+    "CBL": homeMarker,
+    "<img src='libs/icons/pin-restau.png' style='width:40px;height:60px;'>": placeRestau,
+    "<img src='libs/icons/pin-local.png' style='width:40px;height:60px;'>": placeLocal,
+    "<img src='libs/icons/pin-tovisit.png' style='width:40px;height:60px;'>": PLaceToVisit,
+    "<img src='libs/icons/pin-passes.png' style='width:40px;height:60px;'>": placePass,   
+    "<img src='libs/icons/pin-accom.png' style='width:40px;height:60px;'>": Accom,
 };
 
 var overlay = {
